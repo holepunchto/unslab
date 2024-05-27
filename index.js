@@ -20,6 +20,7 @@ function all (list) {
   let size = 0
   for (let i = 0; i < list.length; i++) {
     const buf = list[i]
+    if (buf == null) continue
     size += buf.buffer.byteLength === buf.byteLength ? 0 : buf.byteLength
   }
 
@@ -29,6 +30,10 @@ function all (list) {
   let offset = 0
   for (let i = 0; i < list.length; i++) {
     let buf = list[i]
+    if (buf == null) {
+      result[i] = buf
+      continue
+    }
 
     if (buf.buffer.byteLength !== buf.byteLength) {
       copy.set(buf, offset)

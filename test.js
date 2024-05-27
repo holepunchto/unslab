@@ -18,3 +18,8 @@ test('only when needed', function (t) {
 
   t.is(unslab(buf), buf)
 })
+
+test('all skips over nulls', function (t) {
+  const buf = b4a.alloc(4)
+  t.alike(unslab.all([buf, null]), [buf, null], 'copies through null entries')
+})
