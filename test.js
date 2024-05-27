@@ -12,3 +12,9 @@ test('basic', function (t) {
   t.ok(a.buffer === b.buffer)
   t.is(a.byteLength + b.byteLength, a.buffer.byteLength)
 })
+
+test('only when needed', function (t) {
+  const buf = b4a.alloc(4)
+
+  t.is(unslab(buf), buf)
+})
