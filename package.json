@@ -1,0 +1,25 @@
+{
+  "name": "unslab",
+  "version": "0.0.0",
+  "description": "Unslab some slab'ed buffers",
+  "main": "index.js",
+  "dependencies": {
+    "b4a": "^1.6.6"
+  },
+  "devDependencies": {
+    "brittle": "^3.5.2"
+  },
+  "scripts": {
+    "test": "standard && brittle test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holepunchto/unslab.git"
+  },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/unslab/issues"
+  },
+  "homepage": "https://github.com/holepunchto/unslab"
+}
