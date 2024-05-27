@@ -1,6 +1,6 @@
 {
   "name": "unslab",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Unslab some slab'ed buffers",
   "main": "index.js",
   "files": [
