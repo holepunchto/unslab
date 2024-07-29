@@ -6,7 +6,7 @@ unslab.is = is
 module.exports = unslab
 
 function unslab (buf) {
-  if (buf.buffer.byteLength === buf.byteLength) return buf
+  if (buf === null || buf.buffer.byteLength === buf.byteLength) return buf
   const copy = b4a.allocUnsafeSlow(buf.byteLength)
   copy.set(buf, 0)
   return copy
