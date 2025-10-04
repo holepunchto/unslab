@@ -8,7 +8,7 @@ npm install unslab
 
 ## Usage
 
-``` js
+```js
 const unslab = require('unslab')
 
 // the buf returned unpools the buffer passed from the memory slab
