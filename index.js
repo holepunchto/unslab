@@ -20,10 +20,7 @@ function all(list) {
   let size = 0
   for (let i = 0; i < list.length; i++) {
     const buf = list[i]
-    size +=
-      buf === null || buf.buffer.byteLength === buf.byteLength
-        ? 0
-        : buf.byteLength
+    size += buf === null || buf.buffer.byteLength === buf.byteLength ? 0 : buf.byteLength
   }
 
   const copy = b4a.allocUnsafeSlow(size)
