@@ -5,18 +5,18 @@ unslab.is = is
 
 module.exports = unslab
 
-function unslab (buf) {
+function unslab(buf) {
   if (buf === null || buf.buffer.byteLength === buf.byteLength) return buf
   const copy = b4a.allocUnsafeSlow(buf.byteLength)
   copy.set(buf, 0)
   return copy
 }
 
-function is (buf) {
+function is(buf) {
   return buf.buffer.byteLength !== buf.byteLength
 }
 
-function all (list) {
+function all(list) {
   let size = 0
   for (let i = 0; i < list.length; i++) {
     const buf = list[i]
@@ -32,7 +32,7 @@ function all (list) {
 
     if (buf !== null && buf.buffer.byteLength !== buf.byteLength) {
       copy.set(buf, offset)
-      buf = copy.subarray(offset, offset += buf.byteLength)
+      buf = copy.subarray(offset, (offset += buf.byteLength))
     }
 
     result[i] = buf

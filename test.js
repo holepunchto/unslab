@@ -3,9 +3,9 @@ const test = require('brittle')
 const b4a = require('b4a')
 
 test('basic', function (t) {
-  const test = unslab(b4a.from('hello world'))
+  const result = unslab(b4a.from('hello world'))
 
-  t.is(test.buffer.byteLength, test.byteLength)
+  t.is(result.buffer.byteLength, result.byteLength)
 
   const [a, b] = unslab.all([b4a.from('hello'), b4a.from('world')])
 
